@@ -18,63 +18,51 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-}
-
-header {
   background-color: #fff;
-}
-
-.wrapper {
-  overflow: hidden;
-  max-width: 45em;
-  margin: 0 auto;
-  padding-top: 0;
-}
-
-.img-flex {
-  display: block;
-  width: 100%;
-  float: left;
-  padding-left: 2rem;
-}
-
-.section-letter {
-  width: 49%;
-  padding-top: 1rem;
-}
-
-.section-icon {
-  width: 49%;
-  float: right;
-  padding-right: 2rem;
-  padding-top: 0;
-}
-
-.section-body {
-  padding: 1.3rem;
-  margin: 1.4rem;
-  padding-left: 0;
-  margin-left: 1rem;
-  padding-bottom: 0;
-  margin-bottom: 1.5rem;
-}
-
-img {
-  display: block;
+  margin: 0;
 }
 
 section {
   background-color: #e5c30a;
 }
 
+.wrapper {
+  margin: 0 auto;
+  max-width: 45em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-flex {
+  display: block;
+  width: 100%;
+  max-width: 45em;
+}
+
+.section-letter {
+  width: 46%;
+  padding: 1.25rem 0 0 1rem;
+}
+
+.section-icon {
+  width: 46%;
+  padding: 1.25rem 0 0 1rem;
+}
+
+.section-body {
+  width: 85%;
+}
+
 section h2 {
-  margin-bottom: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: .5rem 0 0 1rem;
 }
 
 section p {
-  margin-top: 0;
+  font-weight: normal;
+  margin: 0 0 0 1rem;
+  padding-bottom: 1.5rem;
 }
 
 @media only screen and (min-width: 25em) {
@@ -84,19 +72,18 @@ section p {
     line-height: 1.3;
   }
 
+  .section-body {
+    width: 90%;
+  }
+
   .section-letter {
-    width: 45%;
+    width: 40%;
+    margin-left: 1.3rem;
   }
 
   .section-icon {
-    width: 45%;
-    float: right;
-    padding-right: 2rem;
-    padding-top: 0;
-  }
-
-  .section-body {
-    padding-left: .5rem;
+    width: 40%;
+    margin-left: 1rem;
   }
 
 }
@@ -108,38 +95,50 @@ section p {
     line-height: 1.4;
   }
 
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
   .img-flex {
-    width: 25%;
-    padding-left: 0;
-    padding-top: 1.5rem;
-    margin-left: 3rem;
-  }
-
-  .section-icon {
-    width: 19%;
-    float: right;
-  }
-
-  .section-body {
-    margin: 0;
-    padding-top: 0;
-    padding-left: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .section-letter {
-    padding-top: 0;
+    order: 1;
+    padding: 0;
+    margin: 1rem 0 1rem 1rem;
+    width: 12%;
+  }
+
+  .section-body {
+    order: 2;
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 60%;
   }
 
   section h2 {
-    padding-left: 2rem;
-    margin-left: 5rem;
-    margin-right: 7rem;
+    margin: 0;
+    padding: 0;
   }
 
   section p {
-    padding-left: 2rem;
-    margin-left: 5rem;
-    margin-right: 7rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .section-icon {
+    order: 3;
+    padding: 0;
+    margin: 1rem 1rem 1rem 0;
+    width: 12%;
   }
 
 }
@@ -151,28 +150,34 @@ section p {
     line-height: 1.5;
   }
 
-  .img-flex {
-    width: 35%;
-    padding-left: 0;
-    padding-top: 1.5rem;
-    margin-left: .5rem;
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .section-letter {
+    order: 1;
+    padding: 0;
+    margin: 1rem 0 1rem 1rem;
+    width: 17%;
   }
 
   .section-icon {
-    width: 20%;
-    float: right;
-    margin-top: 1.5rem;
-  }
-
-  img {
-    padding-bottom: 1rem;
+    order: 3;
+    padding: 0;
+    margin: 1rem 1rem 1rem 0;
+    width: 17%;
   }
 
   .section-body {
-    margin: 0;
-    padding-top: 0;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    order: 2;
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 60%;
   }
 
 }
@@ -181,7 +186,6 @@ section p {
 
   html {
     font-size: 130%;
-    line-height: 1.5;
   }
 
 }
